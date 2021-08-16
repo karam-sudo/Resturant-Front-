@@ -1,0 +1,711 @@
+
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--IE meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--mobile meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="resturent, food, menu, eat "  >
+    <meta name="description" content=""  >
+    <title >  </title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Frijole&family=Gloria+Hallelujah&family=Great+Vibes&family=Langar&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      /* all -menu*/
+      section#all
+      {  
+        width: 100%;
+        text-align: center;
+        padding:162px 15px 15px 15px;
+        background-color: #1a1414;
+        color: white;
+        margin: 120px 0px 0px 0px;
+        background-image: url('images/all/all.jpg');
+        background-size:cover;
+      }
+   
+      /* Content */
+       
+       div.content {
+        width: 100%;
+        padding: 20px;
+        height: 400px;
+      }
+      div.content h4
+      {
+        color: rgb(0, 0, 0);
+        margin-top: 15px;
+      }
+      div.content p
+      {
+        color: red;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .content img
+      {
+        width: 80px;
+        height: 200px;
+        opacity: 0.9;
+      }
+
+      h1 {
+        color: rgb(255, 255, 31);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+        font-size: 49px;
+        text-shadow:  2px 2px black ;
+        font-family:cursive;
+      }
+      h2{
+        color: black;
+        font-family:cursive;
+      }
+      section#all hr
+      {
+        background-color: rgb(255, 255, 31);
+        font-size: large;
+        width:285px;
+      }
+
+
+      /* Add padding BETWEEN each column */
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        display: none; /* Hide all elements by default */
+      }
+      @media screen and (max-width: 768px) {
+        .column {
+       
+        width: 100%;} 
+      }
+      /* Clear floats after rows */ 
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+
+
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+
+      /* Style the buttons */
+      .btn1 {
+        width: 100px;
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: rgb(124, 124, 124);
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 5px;
+      }
+
+      .btn1:hover {
+        background-color: rgba(228, 222, 222, 0.603);
+      }
+
+      .btn1.active {
+        background-color: rgb(39, 37, 37);
+        color: white;
+      }
+     button.more
+     {
+       background-color: black;
+       border-radius: 0.2rem; 
+     }
+     button.more a
+     {
+      color: #ddd;
+      text-decoration: none;
+      
+     }
+    </style>
+    <!--if it IE-->
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <!--end if-->
+    <!--jquery library-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+
+    <!--popper js-->
+    <script src="js/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript-->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn1");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn1");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+ </head>
+
+  <body>
+    <!-- navbar-->
+    <nav class="container-fluid navbar navbar-expand-md bg-light navbar-dark fixed-top">
+
+      <!-- Brand -->
+      <a class="navbar-brand  wow pulse" href="index.html" style="font-family: 'Carter One', cursive;
+      font-family: 'Frijole', cursive;
+      font-family: 'Gloria Hallelujah', cursive;
+      font-family: 'Great Vibes', cursive;
+      font-family: 'Langar', cursive;
+      font-family: 'Lobster', cursive ;"
+      > 
+      Restaurant
+      </a>
+  
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ournavbar">
+        <span class="fa fa-bars text-dark "></span>
+      </button>
+
+
+      <!-- Links -->
+      <div class=" collapse navbar-collapse " id="ournavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Menu
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="all.html">all</a>
+              <a class="dropdown-item" href="meals.html">meals</a> 
+              <a class="dropdown-item" href="drinks.html">drinks</a>
+              <a class="dropdown-item" href="snacks.html">snacks</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#chefs">Chefs</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#gallery" target="_blank">Gallery</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about-us">about-us</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact-us">contact-us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link fa fa-shopping-cart" data-toggle="modal" data-target="#Modal-cart" href=""></a>
+          </li>  <!-- Button to Open the Modal -->
+
+  
+        </ul>
+     </div> <!-- end container-->
+    </nav> <!-- end navbar-->
+     
+    <section id="all" >
+      <div class=" container-fluid main wow fadeInDownBig">
+        <h1>MYLOGO.COM</h1>
+        <hr>
+
+        <h2>PORTFOLIO</h2>
+       
+
+        <div id="mybtnContainer">
+          <button class="btn1 active" onclick="filterSelection('all')">Show all</button>
+          <button class="btn1" onclick="filterSelection('main-course')"> meals</button>
+          <button class="btn1" onclick="filterSelection('drinks')">Drinks </button>
+          <button class="btn1" onclick="filterSelection('snacks')">Snacks</button>
+          <button class="btn1" onclick="filterSelection('dessert')">Dessert</button>
+        </div>
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <div class="column main-course ">
+            <div class="content">
+              <img src="images/all/Grilled SalmonWith Dill Sauce.jpg" alt="Grilled Salmon With Dill Sauce" style="width:100%">
+              <h4>Grilled Salmon With Dill Sauce</h4>
+              <p>Price: 10$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          <div class="column main-course ">
+            <div class="content ">
+            <img src="images/all/Pepperoni Pizza.jpg" alt="Pepperoni Pizza" style="width:100%">
+              <h4>Pepperoni Pizza</h4>
+              <p>Price: 4$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          <div class="column main-course">
+            <div class="content">
+            <img src="images/all/Chicken-and-mushroom-pie.jpg" alt="Chicken and Mushroom pie" style="width:100%">
+              <h4>Chicken and Mushroom pie</h4>
+              <p>Price: 9$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          
+          <div class="column main-course">
+            <div class="content">
+              <img src="images/all/fajitas chicken.jpg" alt="Fajtas Chicken" style="width:100%">
+              <h4>Fajtas Chicken</h4>
+              <p>Price: 6$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          <div class="column main-course">
+            <div class="content">
+            <img src="images/all/Roast Beef With Vegetables.jpg" alt="Roast Beef With Vegetables" style="width:100%">
+              <h4>Roast Beef With Vegetables</h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          <div class="column main-course">
+            <div class="content">
+            <img src="images/all/sushi.jpg" alt="sushi" style="width:100%">
+              <h4>sushi</h4>
+              <p>Price: 6$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+
+          <div class="column main-course">
+            <div class="content">
+            <img src="images/all/Spinach and ricotta cannelloni.jpg" alt="Spinach and ricotta cannelloni " style="width:100%">
+              <h4>Spinach and ricotta cannelloni </h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          <div class="column main-course">
+            <div class="content">
+            <img src="images/all/Lasagne.jpg" alt="Lasagne" style="width:100%">
+              <h4>Lasagne</h4>
+              <p>Price: 6$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          <div class="column main-course">
+            <div class="content">
+            <img src="images/all/Crispy Calamari Rings.jpg" alt="Crispy Calamari Rings" style="width:100%">
+              <h4>Crispy Calamari Rings</h4>
+              <p>Price: 4$</p>
+              <button class="more" ><a href="meals.html">More</a></button>
+            </div>
+          </div>
+          <!--feltr drinks-->
+          <div class="column drinks">
+            <div class="content">
+            <img src="images/all/FruitJuices.jpg" alt=" Cold Drinks " style="width:100%">
+              <h4>Cold Drinks</h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="drinks.html">More</a></button>
+            </div>
+          </div>
+          
+          <div class="column drinks">
+            <div class="content">
+            <img src="images/all/hot.jpg" alt="Hot Drinks" style="width:100%">
+              <h4>Hot Drinks</h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="drinks.html">More</a></button>
+            </div>
+          </div>
+
+          <div class="column drinks ">
+            <div class="content">
+            <img src="images/all/cola.jpg" alt="Soft Drinks" style="width:100%">
+              <h4>Soft Drinks</h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="drinks.html">More</a></button>
+            </div>
+          </div>
+
+          <div class="column drinks ">
+            <div class="content">
+            <img src="images/all/beer.jpg" alt="Beer" style="width:100%">
+              <h4>Beer</h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="drinks.html">More</a></button>
+            </div>
+          </div>
+          <!-- sandwishes & snacks-->
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/Beef Sandwiches.jpg" alt="Beef Sandwiches" style="width:100%">
+              <h4>Beef Sandwiches</h4>
+              <p>Price: 6$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/Cheese Sandwiches.jpg" alt="Cheese Sandwiches" style="width:100%">
+              <h4>Cheese Sandwiches </h4>
+              <p>Price: 7$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/Beef Burger.jpg" alt="Beef Burger" style="width:100%">
+              <h4>Beef Burger</h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/Green Salad.jpg" alt="Green Salad" style="width:100%">
+              <h4>Green Salad</h4>
+              <p>Price: 6$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+          
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/tomato bruschetta.jpg" alt="Tomato Bruschetta" style="width:100%">
+              <h4>Tomato Bruschetta</h4>
+              <p>Price: 5$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+          
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/French-Chicken-Onion-Soup.jpg" alt="French Onion Soup" style="width:100%">
+              <h4>French Onion Soup</h4>
+              <p>Price: 9$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/spring roll 3.jpg" alt="Spring Roll" style="width:100%">
+              <h4>Spring Roll </h4>
+              <p>Price: 4$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+          
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/potato chips.jpg" alt="Potato Chips" style="width:100%">
+              <h4>Potato Chips</h4>
+              <p>Price: 6$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+          
+          <div class="column snacks">
+            <div class="content">
+              <img src="images/all/caesar-salad.jpg" alt="Caesar Salad" style="width:100%">
+              <h4>Caesar Salad</h4>
+              <p>Price: 4$</p>
+              <button class="more" ><a href="snacks.html">More</a></button>
+            </div>
+          </div>
+          
+          <!-- dessert-->
+          <div class="column dessert">
+            <div class="content">
+              <img src="images/all/cake.jpg" alt="Cake" style="width:100%">
+              <h4>Cake</h4>
+              <p>Price: 4$</p>
+            </div>
+          </div>
+
+          <div class="column dessert">
+            <div class="content">
+              <img src="images/all/chocolate-ice-cream.webp" alt="chocolate Ice Cream " style="width:100%">
+              <h4>chocolate Ice Cream </h4>
+              <p>Price: 5$</p>
+            </div>
+          </div>
+
+          <div class="column dessert">
+            <div class="content">
+              <img src="images/all/fruit salad.jpg" alt="Fruit Salad" style="width:100%">
+              <h4>Fruit Salad </h4>
+              <p>Price: 9$</p>
+            </div>
+          </div>
+
+          <div class="column dessert">
+            <div class="content">
+              <img src="images/all/Vanilla-Ice-Cream.jpg" alt="Vanilla Ice Cream" style="width:100%">
+              <h4>Vanilla Ice Cream</h4>
+              <p>Price: 4$</p>
+            </div>
+          </div>
+
+          <div class="column dessert">
+            <div class="content">
+              <img src="images/all/Blueberry-Cheesecake.jpg" alt="Blueberry Cheesecake" style="width:100%">
+              <h4>Blueberry Cheesecake</h4>
+              <p>Price: 7$</p>
+            </div>
+          </div>
+          <div class="column dessert">
+            <div class="content">
+              <img src="images/all/Key-Lime-Pie-recipe-1.jpg" alt="Key Lime Pie" style="width:100%">
+              <h4>Key Lime Pie</h4>
+              <p>Price: 6$</p>
+            </div>
+          </div>
+
+         
+        </div> <!-- END GRID -->
+     
+      </div>  <!-- END MAIN -->
+
+    </section>
+
+    <section id="contact-us">
+      <div class="container-fluid ">
+        <div class="row">
+         <div class="col-md-6 col-sm-12 map">
+            <div >
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d858950.5642987737!2d36.92001881968648!3d32.75841984403265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e0bc96166b3b%3A0xae4a24b084977111!2sShades%20Of%20Damas%20Cafe%20%26%20Restaurant!5e0!3m2!1sen!2s!4v1609064807390!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            </div>
+          </div>
+
+          <div class=" col-md-6 col-sm-12  ourcanavas" >
+            <canvas id="canvas" width="200" height="200"
+            style="background-color:rgb(0, 0, 0)">
+            </canvas>
+            <br>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/32d7136d57/as-suwayda/" data-label_1="AS SUWAYDA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="original" >AS SUWAYDA WEATHER</a>
+
+          <div>
+        </div> 
+        <div class="row">
+          <div class="col-sm-12 ourmodal">
+            <p style="font-family: 'Carter One', cursive;
+            font-family: 'Frijole', cursive;
+            font-family: 'Gloria Hallelujah', cursive;
+            font-family: 'Great Vibes', cursive;
+            font-family: 'Langar', cursive;
+            font-family: 'Lobster', cursive ;">If you have a problem or suggestion, we would like you to let us know by contacting the support team</p>
+            <br>
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn-contact btn-dark" data-toggle="modal" data-target="#myModal">
+              Contact Us
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h3 class="modal-title sending-msg"></h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <form>
+        
+                      <input type="text" name="username" id="username" placeholder="Your Name"><br>
+                      <input type="text" name="email" id="email" placeholder="Your E-mail"><br>
+                      <input type="text" name="Subject" id="Subject" placeholder="Subject"><br>
+                      <input type="text" name="message" id="message" placeholder="Message"><br>
+                      <input class="submit" type="submit" value="Send">
+                    </form>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+              
+
+          
+            </div>
+          </div>
+        </div>
+     </div>
+
+     <div class="container-fluid icons">
+        <div class="row">
+          <div class="info col-md-6 col-sm-12">
+            <i class="fa fa-map-marker "></i>
+            <span >Location: Syria_Damas</span>
+          </div>
+  
+          <div class="info col-md-6 col-sm-12 ">
+            <i class="fa fa-phone " ></i>
+            <span> Phone: +963946115273</span>
+          </div>
+  
+          <div class="info  col-md-6 col-sm-12 ">
+            <i class="fa fa-edge"></i>
+            <span>E-Mail: khattaramany@gmail.com</span>
+          </div>
+  
+          <div class="info col-md-6 col-sm-12">
+            <i class="fa fa-clock-o"></i>
+           <span>Open Hours: 10:00 AM -23:00 PM</span>
+          </div>
+        </div>
+     </div>
+   </section>
+
+    <footer class="container-fluid footer" >
+      <div>
+        <h3>Follow Us</h3>
+      </div>
+      
+      <div>
+        <a href="https://www.facebook.com/sharer.php"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-instagram  "></i></a>
+        <a href="https://twitter.com/intent/tweet"><i class="	fa fa-twitter"></i></a>
+        <a href="https://web.skype.com/share"><i class="fa fa-skype"></i></a>
+        <i class=" fa fa-arrow-up" id="up"></i>
+        <br>
+        <span class="text-warning"> &copy; Copyright restaurant. All Rights Reserved</span>
+        
+      </div> 
+    </footer>
+
+
+      
+      
+    <script src="js/plugins.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+
+    <!-- Template wow.js -->
+    <script src="js/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+  </body>
+</html>
+  
+
+
+

@@ -1,0 +1,992 @@
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones: */
+  
+    .about-us ,.contact-us, .menu{ width: 100%;}
+    .about-paragraph{font-size:12px;} 
+    .rounded {padding: 10px;}
+    div.drinks-content div.drinks-img { width: 100%; height: 400px;}
+    section.chefs{margin:15px 0px ;}
+    div.gallery-content {width:100%;}
+    div.ourmodal p {font-size:20px;} 
+    div.info span{font-size: 12px;}
+    } 
+    @media screen and (min-width: 1024px)
+    {
+        div.ourmodal p {font-size:30px;}
+    }
+    @media screen and (min-width: 1024px)
+    {
+        nav.navbar{text-align: center;}
+        ul.navbar-nav li.nav-item a.nav-link{margin: 30px;}
+        div.info span{font-size: 25px;}
+    }
+    @media screen and (min-width:2560px)
+    {
+        .about-paragraph{font-size:30px;}
+    }
+    @media screen and (min-width:1440px)
+    {
+        .about-paragraph{padding-top: 40px;}
+    }
+
+  
+
+ html {
+    scroll-behavior: smooth;
+  } 
+ body
+ {
+     width: 100%;
+     height: auto;
+    background-color: black;
+    color: white;
+ }
+ .dark-mode {
+  background-color: white;
+  color: #000;
+}
+
+
+ section.home
+ {
+     width: 100%;
+     padding: 0px;
+ }
+ /* ----home------ modal-register */
+ #Modal-login
+ {
+   color: black;
+ }
+ div.modal-body
+ {
+     background-color: #d8d8dab9 ;
+     padding: 8px;
+     text-align: center;
+ }
+
+  div.modal-body form.login {
+    width: 100%;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    opacity: 0.9;
+   
+ }
+ div.imgcontainer 
+ {
+   text-align: center;
+ }
+ div.social
+ {
+   padding: 2px;
+ }
+ span.or
+ {
+   text-align: center;
+   font-weight: bold;
+ }
+  /* style inputs and link buttons */
+
+  .btn {
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; /* remove underline from anchors */
+  }
+  
+  input:hover, .btn:hover {
+    opacity: 1;
+  }
+  
+  /* add appropriate colors to fb, twitter and google buttons */
+  .fb {
+    background-color: #1f3153;
+    color: white;
+    width: 200px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 3px;
+
+  }
+  
+  .twitter {
+    background-color: #1b96f3;;
+    color: white;
+    width:  200px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 3px;
+  }
+  
+  .google {
+    background-color: #dd4b39;
+    color: white;
+    width:  200px;
+    font-size: 12px;
+    font-weight: bold
+  }
+  
+  /* style the submit button */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Two-column layout */
+  .col {
+    float: left;
+    width: 30%;
+    margin: auto;
+    margin-top: 3px;
+    padding: 2px 5px;
+    margin-right: 30px;
+    margin-bottom: 118p;
+    line-height: 35px;
+  }
+
+ 
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+  /* bottom container */
+  .bottom-container {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0px 0px 4px 4px;
+    width: 100%;
+    height: 60px;
+  }
+  
+  /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 650px) {
+    .col {
+      width: 100%;
+      margin-top: 0;
+    }
+    /* hide the vertical line */
+    .vl {
+      display: none;
+    }
+  }
+  /*modal-cart*/
+  @media screen and (min-width: 768px){
+  #Modal-cart
+  {
+    color: black;
+    font-size: 17px;
+  }
+  } 
+  @media screen and (max-width: 425px){
+  #Modal-cart {
+    color: black;
+    font-size: 13px;
+  }
+  }
+ 
+  /* ------home-------- navbar*/
+  nav.navbar
+  {
+    padding: 30px;
+    opacity: 0.9; 
+    width: 100%;
+    height: 120px;
+
+  }
+  
+  nav.navbar:hover
+  {
+    opacity: 1;  
+  }
+  nav.navbar a.navbar-brand
+  {
+    color: rgba(155, 25, 25, 0.8);
+    font-size: xx-large;
+    font-weight: bold;
+    
+  }
+  ul.navbar-nav li.nav-item a.nav-link
+  {
+    color:rgb(155, 25, 25);
+    background-color: rgba(201, 192, 192, 0.637);
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: 9px;
+    border-radius: 2rem;
+
+  }
+  ul.navbar-nav li.nav-item a.nav-link:hover
+ {
+    color:#1a1414 ;
+    background-color:#bb5c50;
+    
+    transform :scale(1.1,1.1);
+ }
+ nav.navbar a.navbar-brand img.brand-img
+ {
+     width: 150px;
+     height: 160px;
+ }
+ nav.navbar a.navbar-brand:hover
+ {
+  transform: scale(1.2,1.2);
+  color :black;
+ }
+
+ .dropdown-item{
+  background-color: #faf4f4;
+  text-indent: 10px;
+  }
+  .dropdown-item:hover{
+    font-size: larger;
+    background-color: #f3010170;   
+  }
+  .dropdown-item.active
+  {
+    background-color: #7e1717;
+  }
+  .dropdown-divider
+  {   
+    border-top: 1px solid #701111;
+  }
+  .fa {
+      
+    font-size: 20px;
+    width: 30px;
+
+  }
+ 
+ /* carousel */
+ .carousel
+ {
+    margin-top: 120px
+ }
+.carousel-indicators{
+    bottom: 5px;
+    color: #000;
+
+}
+.carousel-indicators li{
+    background-color: rgb(153, 102, 95);
+    
+}
+.carousel-item{
+
+    width: 100%;
+    background-size: cover;
+   
+}
+.carousel-caption
+{
+ bottom: 300px;
+ left: 10px; 
+ top: 300px;                
+}
+.carousel-caption h1
+{
+    color: rgb(226, 223, 29);
+    font-size: 40px;
+    font-weight: bold;
+   
+}
+.carousel-caption p
+{
+    color: rgb(187, 187, 168);
+    font-size: xx-large;    
+}
+
+
+
+ /* about */
+ .about-us
+ {
+     padding: 10px 0px;
+     margin-top: 2px;
+     background-color: rgb(119, 67, 67);
+     width: 100%;
+     height: auto;
+ }
+ 
+ .about-h2
+ {
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 50px;
+    color:#691a0f;
+    text-align: center;
+ }
+.about-paragraph
+{   padding: 10px;
+     margin-top: 50px;
+    font-weight: 700;
+    text-align: left;
+    color: rgb(247, 241, 241);
+    background-color: rgb(61, 58, 58);
+    border-radius: 2rem;
+    
+
+}
+
+ div.about-img img
+ {     width: 100%;
+      opacity: 0.9;
+      height: 300px;
+      border-radius: 10rem ;   
+ }
+
+
+ div.about-img img:hover
+{
+  opacity: 1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+ /*end about-us*/
+
+
+ 
+section.gallery
+{
+width: 100%;  
+
+}
+div.section-title
+{
+
+   text-align: center;
+}
+div.gallery-content {
+   width: 100%;
+   display: inline-block;
+   padding: 10px;
+   margin-top: 5px;
+   border: 1px solid rgb(202, 198, 198);
+   opacity: 0.9;
+
+} 
+
+ div.gallery-content:hover {
+   border: 2px solid #777;
+   opacity: 1;
+   background-color: rgb(213, 231, 233);
+   border-radius: 2rem;
+ 
+ }
+ 
+ div.gallery-content img {
+   width: 100%;
+   height: 300px;
+ }
+ 
+ div.desc {
+   padding: 15px;
+   text-align: center;
+ }
+
+/*section chefs*/
+section.chefs
+{
+width: 100%;
+padding: 20px;
+margin: 25px 0px;
+background-image: url('../images/chefs/chefs-bg.jpg');
+text-align: center;
+opacity: 0.8;
+
+}
+section.chefs:hover
+{
+   opacity: 1;
+}
+div.member
+{   width: 100%;
+   background-color: rgb(248, 245, 245);
+   margin: 15px;
+   padding: 15px;
+}
+div.member-info{
+   text-align: center;
+}
+div.member:hover
+{
+   background-color: rgb(216, 245, 242);
+}
+div.member div.pic
+{
+   width: 100%;
+}
+div.member div.pic:hover
+{
+   cursor: pointer;
+   transform: scale(1.1,1.1);
+  
+}
+section.chefs div.section-title h2
+{
+ font-weight: bold;
+ color: #801103;
+}
+section.chefs div.section-title p
+{
+  
+   font-size: large;  
+}
+div.member-info h4
+{
+ padding: 10px;
+ margin: 5px;
+
+font-size: large;
+color: red;
+
+}
+
+div.member-info span
+{
+ 
+   font-size: x-large;
+   color: rgb(2, 1, 1);
+}
+div.member div.member-info div.social a i
+{
+ font-size: larger;
+ color: #bb3321;
+ margin: 10px;
+}
+div.member div.member-info div.social a i:hover
+{
+   transform: scale(1.3,1.3);
+   color: rgb(30, 30, 75);
+}
+/*end section chefs*/
+
+
+/*section gallery*/
+
+/*contact us*/
+#contact-us
+{
+   width: 100%;
+   margin: 0px 0px;
+   padding: 10px; 
+   font-size: medium;
+   font-weight: bold;
+   background-color: #dfd4d4;
+   text-align: left;
+
+}
+#contact-us hr{
+   font-size: large;
+   color: black;
+}
+div.icons{
+text-align: left;
+}
+div.info
+{   width: 100%;
+   padding: 5px;
+   display: inline-block;
+  
+}
+
+div.info span
+{
+color: #000;
+font-weight: bold; 
+}
+
+div.info span:hover
+{
+   transform: scale(1.1,1.1);
+}
+
+div.info i
+{
+margin: 10px;
+font-size: 35px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(134, 18, 18);
+border-radius: 5px;
+}
+
+div.info i:hover
+{ 
+background-color: rgb(134, 18, 18);
+ color: rgb(235, 196, 196);
+ transform: scale(1.2,1.2);
+}
+div.map
+{
+  width: 100%;
+  height:500px;
+  padding :0px;
+  overflow: hidden;
+  text-align: center;
+}
+canvas
+{
+margin-top: 10px;
+}
+div.ourcanavas
+{
+    text-align: center;
+}
+div.ourmodal
+{
+    padding: 30px;
+    text-align: center;
+}
+
+div.ourmodal p
+{
+    color: black;
+   text-shadow: 2px 2px 4px #e70808;
+  
+}
+#myModal div.modal-content
+{
+background-image: url('../images/forms.jpg'); 
+color: black;  
+}
+
+div.modal-body form
+{
+   width: 100%;
+   height: 170px;
+   margin: 10px;
+   padding:10px;
+   text-align: center;
+   opacity: 0.9;
+}
+
+div.modal-body form input
+{
+   margin: 3px;
+   width: 75%;
+   text-align: center;
+}
+
+div.modal-body form input.submit
+{
+   width: 25%;
+   background-color: rgba(180, 179, 179, 0.822);
+   color: black;
+   border: 1px solid black;
+   border-radius: 2rem;
+}
+.btn-contact
+{
+  width: 100px;
+  background-color: black;
+  border-radius: 0.5rem
+}
+.btn-contact:hover
+{
+ 
+  background-color: rgb(247, 247, 247);
+  color: black;
+ 
+}
+
+
+/*footer*/
+
+.footer 
+{
+ width: 100%;
+ height: 160px;
+ margin: 0px;
+ padding-top: 20px;
+ text-align: center;
+ background-color:#801103;
+ color: rgb(240, 227, 222);
+ font-size: l5px;
+}
+.footer i
+{
+ margin: 15px;
+}
+.footer i:hover
+{
+    transform: scale(1.6,1.6);
+}
+#up
+{
+    width: 30px;
+    height: 30px;
+   bottom: 0;
+   right: 0;
+   position: fixed;
+   color: black;
+   font-size: 20px;
+}
+
+  
+
+
+
+/*
+.menu-item2:hover{
+   cursor:pointer;
+   transform: scale(1.2, 1.2);
+   background-color: rgb(235, 161, 213);
+}
+*/
+  
+
+   /*meals menu*/
+   
+
+
+ section.meals
+ {
+     width: 100%;
+     height: auto;
+     padding: 120px 10px 10px 10px;
+     margin: 5px 0px;
+     
+ }
+ section.meals hr
+ {
+   background-color: rgb(88, 87, 87);
+   font-weight:900;
+ }
+
+ section.meals div.content h3:hover
+ {
+ transform: scale(1.1,1.1);
+ color: #1eca35;
+ }
+ section.meals div.content p{
+   color: #000;
+   font-family:sans-serif;
+   font-size: 16px;
+ }
+ section.meals div.content p.meal-price{
+  color: rgb(255, 0, 0);
+  font-family:sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 20px;
+}
+section.meals div.content p.meal-price:hover{
+ transform: scale(1.1,1.1);
+}
+ input.meal-quantity
+ {
+     width: 60%;
+     border-radius: 0.5rem;
+     text-align: center;
+     
+ }
+ input.add2
+ {
+     width: 70px;
+     border-radius: 0.5rem;
+     text-align: center;
+     background-color: black;
+     color: blanchedalmond;
+ }
+ input.add2:hover
+ {
+    background-color: rgb(146, 45, 45);  
+ }
+
+    /*drinks menu*/
+
+ section.drinks{
+     padding-top: 120px;
+ }
+ div.drinks-content
+ {  width: 100%;
+    height: auto;
+    padding:20px ;
+    background-color:rgb(246, 246, 246);
+    color: rgb(0, 0, 0);
+    line-height: 2.5;
+    text-align: center;
+    margin:0px;
+ }
+
+ div.drinks-content div.drinks-img
+ {
+     padding-top: 40px;
+     background-image: url(../images/drinks/cover.jpg);
+     background-size: cover;
+     opacity: 0.9;
+     border-radius: 11rem;
+ }
+
+ div.drinks-content div.drinks-img:hover
+ {
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 4rem;
+ }
+
+ div.hot-drinks ,div.cold-drinks,div.soft-drinks ,div.beer ,div.juices
+ {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 40px;
+ }
+
+div.list ul
+{
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+div.list ul li:hover
+{
+    transform: scale(1.1,1.1);
+    color: red;
+}
+ div.drinks-content h1
+ {
+     color: #801103;
+ }
+
+ div.drinks-content hr
+ {
+  width: 200px;
+ background-color: #801103;
+ }
+ div.drinks-content h6:hover
+ {
+    transform: scale(1.2,1.2);
+    color: red;
+
+ }
+ div.drinks-img h2
+ {
+  color: #691a0f;
+ }
+ div.drinks-img h2:hover
+ {
+     transform: scale(1.1,1.1);
+ }
+ /* end drinks menu*/
+
+
+ /*snacks menu*/
+ section.snacks
+ {
+     width: 100%;
+     height: auto;
+     padding: 120px 10px 10px 10px;
+     margin: 5px 0px;
+     
+ }
+ section.snacks div.content h3:hover
+ {
+ transform: scale(1.1,1.1);
+ color: #1eca35;
+ }
+ section.snacks div.content p{
+   color: #000;
+   font-family:sans-serif;
+   font-size: 16px;
+ }
+ section.snacks div.content p.snack-price{
+  color: rgb(255, 0, 0);
+  font-family:sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 20px;
+}
+section.snacks div.content p.snack-price:hover{
+ transform: scale(1.1,1.1);
+}
+ input.snack-quantity
+ {
+     width: 60%;
+     border-radius: 0.5rem;
+     text-align: center;
+     
+ }
+ input.add1
+ {
+     width: 70px;
+     border-radius: 0.5rem;
+     text-align: center;
+     background-color: black;
+     color: blanchedalmond;
+ }
+ input.add1:hover
+ {
+    background-color: rgb(146, 45, 45);  
+ }
+ table{
+    width: 70%;
+    margin: 20px;
+    border-collapse: collapse;
+}
+ table,th,td{
+    padding: 10px;
+ 
+    text-align: center;
+ }
+ 
+ .badge{
+     color: black;
+     margin-left: -15px;
+     position: absolute;
+ }
+
+ .total-price-items
+ {
+   font-size: 20px;
+   color: red;
+   font-style: italic;
+   font-weight: 400;
+ }
+ div.content
+{
+  border: 2px solid black;
+  padding: 10px;border-radius: 0.5em;
+  font-size: 20px;
+}
+div.content p span
+{
+  color: red;
+  font-weight: bold
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+ /*.............................*/
+ row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 15px;
+    height: 500px;
+  }
+  .content:hover
+  {
+      background-color: rgba(207, 85, 85, 0.507);
+  }
+  .content h3{
+      text-align: center;
+      margin-top: 5px;
+      color:#d6260f;
+      font-style: italic;
+  }
+  .content img{
+      width: 200px;
+      height: 200px;
+      opacity: 0.9;
+    }
+ .content img:hover
+    {   transform: scale(1.1,1.1);
+        opacity: 1;
+    }
+    .content p
+    {
+        font-size: 15px;
+        line-height: 25px;
+    }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+  
+
+
+
+ 
